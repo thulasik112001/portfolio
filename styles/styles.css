@@ -5,21 +5,28 @@
     box-sizing: border-box;
 }
 html{
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 body{
-    background-color: #fff;
-    background-image: url('/images/backgroundimage.jpg');
-    background-size: cover;
+    background-color: #f8aab3;
     
 }
+
+#section-five{
+    background-image: url('/images/bffour.jpg');
+}
+
 #header{
     width: 100%;
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-color: #ffa5b7;
+    background-image: url('/images/bgpo.jpg');
+    background-size: cover;
 }
+
 
 .container{
     padding: 5px 10%;
@@ -31,8 +38,12 @@ nav{
     flex-wrap: wrap;
 }
 .logo{
-    width: 140px;
+    width: 50px;
+    border: #000 10px;
 
+}
+#smallmenu, .header-text {
+    z-index: 999;
 }
 nav ul li{
     display: inline-block;
@@ -40,8 +51,10 @@ nav ul li{
     margin: 10px 20px;
 }
 nav ul li a{
-    color: #fff;
+    color: #000;
+    text-shadow: #f8aab3;
     text-decoration: none;
+    font-weight: bold;
     font-size: 18px;
     position: relative;
 }
@@ -61,6 +74,7 @@ nav ul li a:hover::after{
 .header-text{
     margin-top: 20%;
     font-size: 30px;
+    color: #fff;
 }
 .header-text h1{
     font-size: 60px;
@@ -70,9 +84,10 @@ nav ul li a:hover::after{
     color: #ff004f;
 }
 /* -------------about-------------- */
+
 #about{
     padding: 80px 0;
-    color: white;
+    color: #000;
 }
 .row{
     display: flex;
@@ -84,6 +99,30 @@ nav ul li a:hover::after{
     flex-basis:35%;
 
 }
+.about-col-2{
+    background-color: #fff;
+    padding-left: 20px;
+    
+}
+.about-col-2 p{
+    letter-spacing: 2px;
+}
+.about-col-2 p:hover{
+    letter-spacing: 2px;
+    
+    animation: aboutP 2s linear;
+}
+
+@keyframes aboutP{
+    0%{
+        letter-spacing: 2px;
+    }
+    100%{
+        letter-spacing: 3px;
+    }
+   
+}
+
 .about-col-1 img{
     width: 100%;
     border-radius: 15px;
@@ -97,17 +136,19 @@ font-weight: 600;
 color: #fff;
 }
 /* --------------projects------------------ */
-#services{
+
+#projects{
+    background-image: url('/images/bgpo.jpg');
     padding: 30px;
 
 }
-.services-list{
+.projects-list{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
-.services-list div{
+.projects-list div{
     background: #262626;
     padding: 40px;
     font-size: 13px;
@@ -115,25 +156,25 @@ color: #fff;
     border-radius: 10px;
     transition: background0.5s,transform 0.5s;
 }
-.services-list div i{
+.projects-list div i{
     font-size: 50px;
     margin-bottom: 30px;
 }
-.services-list div h2{
+.projects-list div h2{
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
     margin-bottom: 15px;
 }
-.services-list div a{
+.projects-list div a{
     text-decoration: none;
     color: #fff;
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
 }
-.services-list div:hover{
-    background: #ff004f;
+.projects-list div:hover{
+    background: #facaca;
     transform: translateY(-10px);
 
 }
@@ -162,7 +203,7 @@ color: #fff;
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgb(0,0,0,0.6),#ff004f);
+    background: linear-gradient(rgb(0,0,0,0.6),#f8aab3);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -218,6 +259,76 @@ transform: scale(1.1);
 .btn:hover{
     background: #ff004f;
 }
+/* -----------------Skill-------------- */
+#section-four{
+    background-image: url('/images/bffour.jpg');
+}
+#skills{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#skillcontainer{
+     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; 
+    /*display: grid;
+    grid-template-rows: repeat(3,1fr);*/
+    justify-content: center;
+    grid-gap:1rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+.skill-box{
+    padding: 1rem;
+    color: #ddd;
+    cursor: pointer;
+
+
+}
+.skill-box:hover{
+    padding: 2rem;
+    color: #ff004f;
+    cursor: pointer;
+    text-shadow: 3px 3px 3px #fff;
+    transition:0.5s;
+
+}
+.skill-titles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #a4a1a1;
+
+}
+
+.skill-icon{
+    width: 50px;
+
+}
+.inner{
+    padding-top: 20px;
+}
+.heading{
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    position:relative;
+
+}
+.heading:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height:4px ;
+    width: 100px;
+    background-color: #ff004f;
+}
+
 /* -----------------certifications-------------- */
 #certifications{
     padding: 0 50px;
@@ -241,9 +352,9 @@ transform: scale(1.1);
     transition: transform 0.5s;
 }
 .layerone{
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgb(0,0,0,0.6),#a9a7a8);
+    width: 0%;
+    height: 400px;
+    background: linear-gradient(rgb(0,0,0,0.6),#fff);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -253,11 +364,11 @@ transform: scale(1.1);
     align-items: center;
     justify-content: center;
     flex-direction: column ;
-    padding: 0 40px;
+    
     text-align: center;
     color: #fff;
     font-size: 10px;
-    transition: height 0.5s;
+    transition: width 0.5s;
 
 }
 .layerone h3{
@@ -281,7 +392,7 @@ text-align: center;
 transform: scale(1.1);
 }
 .workshop:hover .layerone{
-    height: 100%;
+    width: 100%;
 }
 .btn{
     display: block;
@@ -299,9 +410,36 @@ transform: scale(1.1);
 .btn:hover{
     background: #ff004f;
 }
+/* ------------------activities----------- */
+#section-six{
+    background-image: url('/images/edtwo.jpeg');
+}
+#activities{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.activity-box{
+    padding: 1rem;
+    color: #ffffff;
+    cursor: pointer;
+
+
+}
+.activity-box:hover{
+    padding: 2rem;
+    background-color: #f8aab3;
+    border-radius: 20px;
+    color: #000;
+    cursor: pointer;
+    text-shadow: 3px 3px 3px #fff;
+    transition:0.5s;
+
+}
 /* ---------------contact------------- */
 .contact-left{
     flex-basis: 35%;
+    flex-wrap: wrap;
 }
 .contact-right{
     flex-basis: 60%;
@@ -344,10 +482,10 @@ form input,form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    background: #262626;
+    background:#fff;
     padding: 15px;
     margin: 15px 0;
-    color: #fff;
+    color: #000;
     font-size: 18px;
     border-radius: 6px;
 }
@@ -374,6 +512,10 @@ nav .fas{
     display: none;
 }
 @media only screen and (max-width:600px){
+    /* #header{
+        background-image: url("/images/smallscreenbg.png");
+        background-size:auto;
+    } */
     .header-text{
         margin-top: 100%;
         font-size: 16px;
@@ -383,16 +525,18 @@ nav .fas{
     }
     nav .fas{
         display: block;
-        font-size: 25px;
+        font-size: 20px;
     }
     nav ul{
         background: #ff004f;
         position: fixed;
         top: 0;
-        right:0;
+        right:-200px;
         width: 200px;
         height: 100vh;
         padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
     }
     nav ul li{
         display: block;
@@ -406,14 +550,37 @@ nav .fas{
 
     }
     .sub-title{
-        font-size: 40px;
+        font-size: 30px;
     }
-    .about-col-1,.about-col-2{
+
+    .about-col-1{
         flex-basis: 100%;
+    }
+    .about-col-2{
+        flex-basis: 100%;
+        text-align: center;
+        font-size: 10px;
+    }
+    #small-about {
+        display: flex;
+        flex-direction: column;
+    }
+    #small-about.about-col-1{
+        width: 200px;
+    }
+    .contact-left{
+        flex-basis: 100%;
+
+    }
+    .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
     }
 }
 #msg{
-    color: #61b752;
+    color: #080808;
     margin-top: -40px;
     display: block;
 }
